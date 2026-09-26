@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native"
 import { Text } from "react-native"
 import { View } from "react-native"
 
-export default function EditProfileScreen() {
+export default function EditProfileScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Edit Profile Screen</Text>

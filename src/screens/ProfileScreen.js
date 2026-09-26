@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
 import { Button, Text, View } from "react-native"
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Profile Screen</Text>
