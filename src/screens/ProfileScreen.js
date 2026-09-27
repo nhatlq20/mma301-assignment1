@@ -1,25 +1,18 @@
-import { StyleSheet } from "react-native"
-import { Button, Text, View } from "react-native"
+import { ActivityIndicator, Button, Text, View } from "react-native"
+import { useProfile } from "../context/ProfileContext";
 
 export default function ProfileScreen({ navigation }) {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Profile Screen</Text>
-            <Button title="Edit Profile" onPress={() => navigation.navigate('EditProfile')}></Button>
+    const { profile, isReady } = useProfile();
 
+    if (!isReady)
+        return <ActivityIndicator style={{ flex: 1 }}></ActivityIndicator>
+
+    return (
+        <View style={{ flex: 1, pading: 20 }}>
+            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>{profile.name}</Text>
+            <Text style={{ marginVertical: 10 }}>{profile.bio}</Text>
+            <Button title="Chỉnh sửa" onPress={() => navigation.navigate('EditProfile')}></Button>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    title: {
-        fontqSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    }
-})
