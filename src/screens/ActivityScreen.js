@@ -1,23 +1,29 @@
-import { StyleSheet } from "react-native"
-import { Text } from "react-native"
-import { View } from "react-native"
-export default function ActivityScreen() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Activity Screen</Text>
-        </View>
-    )
-}
+import { useState } from 'react';
+import { FlatList } from 'react-native';
+import ActivityItem from '../components/ActivityItem';
+import EmptyState from '../components/EmptyState';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-    }
-})
+const initialData = [
+    { id: '1', title: 'Đọc sách', done: false },
+    { id: '2', title: 'Tập gym', done: false },
+];
+
+export default function ActivityScreen() {
+    const [activities, setActivities] = useState(initialData); // đổi thành [] để test empty state
+
+    const toggleItem = (id) => {
+        setActivities(prev =>
+            prev.map(item => item.id === id ? { ...item, done: !item.done } : item) // immutable
+        );
+    };
+
+    if (activities.length === 0) return <EmptyState message="Chưa có hoạt động nào" />;
+
+    return (
+        <FlatList
+            data={activities}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => <ActivityItem item={item} onToggle={toggleItem} />}
+        />
+    );
+}
