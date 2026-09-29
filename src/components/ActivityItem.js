@@ -1,15 +1,13 @@
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-export default function ActivityItems({ item, onToggle }) {
-
+export default function ActivityItem({ item, onToggle }) {
     return (
         <TouchableOpacity style={styles.item} onPress={() => onToggle(item.id)}>
             <Text style={{ fontWeight: item.done ? 'normal' : 'bold' }}>
-                {item.done ? '✅' : '⬜'}
+                {item.done ? '✅ ' : '⬜ '}{item.title}
             </Text>
         </TouchableOpacity>
-
-    )
+    );
 }
 
 const styles = StyleSheet.create({
