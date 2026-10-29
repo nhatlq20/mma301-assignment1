@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 
 

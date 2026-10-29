@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { useState } from 'react';
 import { View, Button } from 'react-native';
 import { useProfile } from '../context/ProfileContext';

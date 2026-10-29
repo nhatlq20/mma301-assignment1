@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 
 export const DEFAULT_PROFILE = {
     name: "Nguoi dung moi",

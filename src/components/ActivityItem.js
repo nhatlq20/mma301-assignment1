@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 export default function ActivityItem({ item, onToggle }) {

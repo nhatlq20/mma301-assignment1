@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 
 export function validateProfile({ name, bio }) {
     const errors = {};

@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 //Nơi duy nhất giao tiếp với AsyncStorage, mọi lõi/corrupt logic đều phải đi qua đây
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { DEFAULT_PROFILE, STORAGE_KEYS } from "../constants/defaultProfile";

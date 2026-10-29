@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { StyleSheet } from "react-native"
 import { Text } from "react-native"
 import { View } from "react-native"

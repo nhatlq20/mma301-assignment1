@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { Switch, Text, View } from "react-native";
 import { useTheme } from '../context/ThemeContext';
 

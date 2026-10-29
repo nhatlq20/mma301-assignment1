@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { Pressable, Text, StyleSheet } from 'react-native';
 
 export default function PrimaryButton({ title, onPress, variant = 'primary' }) {

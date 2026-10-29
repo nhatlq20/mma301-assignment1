@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { View, Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';

@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { useState } from 'react';
 import { FlatList } from 'react-native';
 import ActivityItem from '../components/ActivityItem';

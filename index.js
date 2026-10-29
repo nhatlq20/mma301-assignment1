@@ -1,3 +1,4 @@
+// MMA301 - Le Quang Nhat - CE190875
 import { registerRootComponent } from 'expo';
 import App from './App';
 
